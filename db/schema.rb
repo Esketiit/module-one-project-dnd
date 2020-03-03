@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_184029) do
+ActiveRecord::Schema.define(version: 2020_03_03_185102) do
+
+  create_table "dungeons", force: :cascade do |t|
+    t.string "name"
+    t.integer "difficulty"
+  end
 
   create_table "encounters", force: :cascade do |t|
     t.integer "num_enemies"
