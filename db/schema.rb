@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_180806) do
+ActiveRecord::Schema.define(version: 2020_03_03_184029) do
+
+  create_table "encounters", force: :cascade do |t|
+    t.integer "num_enemies"
+    t.integer "monster_id"
+  end
 
   create_table "monsters", force: :cascade do |t|
     t.string "name"
